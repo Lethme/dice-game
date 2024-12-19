@@ -38,7 +38,7 @@ const scoreBoardData = useProxy((() => {
     const storageItem = localStorage.getItem('dice-game-scores');
 
     try {
-        return JSON.parse(storageItem);
+        return JSON.parse(storageItem) || [];
     } catch {
         return [];
     }
